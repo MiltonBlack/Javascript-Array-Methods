@@ -32,7 +32,18 @@
         console.table(Ranged);
 
         // Map Array
-        
+        const fullNames = users.map(user => `${user.first} ${user.last}` );
+        console.table(fullNames);
+
+        //Sort Array Method
+        const ordered = users.sort(function(first, second) {
+            if (first.year > second.year) {
+                return 1;
+            }else {
+                return -1;
+            }
+        });
+        console.table(ordered);
     </script>
 </body>
 </html>
