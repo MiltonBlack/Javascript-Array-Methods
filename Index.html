@@ -6,6 +6,28 @@
     <title>Javascript Array Methods</title>
 </head>
 <body>
-    
+    <script>
+        const users = [
+            {first: 'Albert', last: 'Einstein', year: '1879', passed: '1955'},
+            {first: 'Isaac', last: 'Newton', year: '1643', passed: '1727'},
+            {first: 'Galileo', last: 'Galilei', year: '1564', passed: '1642'},
+            {first: 'Marie', last: 'Curie', year: '1867', passed: '1934'},
+            {first: 'Johannes', last: 'Kelper', year: '1571', passed: '1630'},
+            {first: 'Nicolas', last: 'Tesla', year: '1473', passed: '1543'},
+            {first: 'Max', last: 'Planck', year: '1858', passed: '1947'},
+        ]
+
+        const people = [
+            'Milton, Azibapu', 'Sonia, Seipolou', 'Thompson, Walton', 'Ayebatari, Moses', 'Ebi, Angaye', 'Live, Numo', 'Sonia, Josiah', 'Don, Paguru', 'Iniye, Pondei', 'Ajayi, Samuel', 'Lilian, Eghoi', 'Ebitimi, Nemine', 'Sammy, Brown', 'Sako, Peace', 'Brass, Ibinabo', 'Abraham, Bestman', 'Dibs, Gabriel', 'GoodNews, Coker', 'Kodak, Black', 'Chris, Brown', 'Yo, Gotti', '50, Cent', 'The, Game', 'Mobb, Deep', 'Ariana, Grande', 'Lil, Wayne', 'Young, Thug', 'Lil, Pump', 'Jay, Z', 'Notorious, BIG', 'Joe, Emmanuel', 'Young, David', 'Wiz, Khalifa', 'Snoop, Dogg'
+        ]
+
+        // Filter Array
+        const fifteen = users.filter(function(user) {
+            if(user.year >= 1500 && user.year <= 1600) {
+                return true;
+            }
+        });
+        console.log(fifteen);
+    </script>
 </body>
 </html>
