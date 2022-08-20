@@ -36,6 +36,7 @@
         console.table(fullNames);
 
         //Sort Array Method
+        // sort users by birthdate, oldest to youngest
         const ordered = users.sort(function(first, second) {
             if (first.year > second.year) {
                 return 1;
@@ -44,6 +45,23 @@
             }
         });
         console.table(ordered);
+        // sort users by birthdate, youngest to oldest
+        const order = users.sort((first, second) => first.year < second.year ? 1 : -1);
+        console.table(order);
+
+        // Reduce Array Method
+        // How many years did all users live?
+        var totalYears = 0;
+
+        for(var i = 0; i < users.length; i++) {
+            totalYears += users[i].year
+        }
+        console.log(totalYears);
+
+        const yearsTotal = users.reduce((total, user) => {
+            return total + (user.passed - user.year);
+        }, 0)
+        console.table(yearsTotal)
     </script>
 </body>
 </html>
