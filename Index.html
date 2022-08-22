@@ -61,7 +61,23 @@
         const yearsTotal = users.reduce((total, user) => {
             return total + (user.passed - user.year);
         }, 0)
-        console.table(yearsTotal)
+        console.table(yearsTotal);
+
+        // sort users by years lived
+
+        const oldest = users.sort(function(a, b) {
+            const lastguy = a.passed - a.year;
+            const nextguy = b.passed - b.year;
+            // Tenary Operation
+            return lastguy > nextguy ? -1 : 1;
+            // If statement (performs the same function)
+            if (lastguy > nextguy) {
+                return -1;
+            } else {
+                return 1;
+            }
+        })
+        console.table(oldest)
     </script>
 </body>
 </html>
