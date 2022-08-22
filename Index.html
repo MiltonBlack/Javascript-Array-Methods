@@ -6,6 +6,28 @@
     <title>Javascript Array Methods</title>
 </head>
 <body>
+    <section>
+        <div class="m-cat">
+            <a href="#">Boulevard of Paris</a>
+            <a href="#">City walls of Paris</a>
+            <a href="#">Theirs wall</a>
+            <a href="#">Wall of Charles V</a>
+            <a href="#">Wall of Philip AI Augustus</a>
+            <a href="#">City gates of Paris</a>
+            <a href="#">Hausmann's renovation of Paris</a>
+            <a href="#">Boulevard of the marshall's</a>
+            <a href="#">Boulevard Barbes</a>
+            <a href="#">Boulevard du crime</a>
+        </div>
+        <div class="mo-cat">
+            <div>
+                <a href="#">Milton of Black</a>
+                <a href="#">Milton  Black</a>
+                <a href="#">sonia of Black</a>
+                <a href="#">sonia Black</a>
+            </div>
+        </div>
+    </section>
     <script>
         const users = [
             {first: 'Albert', last: 'Einstein', year: '1879', passed: '1955'},
@@ -77,7 +99,18 @@
                 return 1;
             }
         })
-        console.table(oldest)
+        console.table(oldest);
+
+        // create a list of Boulevards that contains of in the name.
+        const category = document.querySelector('.m-cat');
+        const categories = document.querySelector('.mo-cat');
+        // convert Nodelist into an Array.from() using the Array constructor.
+        const links = Array.from(category.querySelectorAll('a'));
+        // convert Nodelist items of a tags to an aray using the spread operator.
+        const link = [...categories.querySelectorAll('a')];
+        // map text contents of a element into an array format.
+        const ofs = link.map(lin => lin.innerText).filter(write => write.includes('of'));
+        const offs = links.map(lin => lin.textContent).filter(write => write.includes('of'));
     </script>
 </body>
 </html>
