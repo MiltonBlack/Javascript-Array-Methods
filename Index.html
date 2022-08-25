@@ -111,6 +111,18 @@
         // map text contents of a element into an array format.
         const ofs = link.map(lin => lin.innerText).filter(write => write.includes('of'));
         const offs = links.map(lin => lin.textContent).filter(write => write.includes('of'));
+        console.table(offs);
+        console.table(ofs);
+
+        // Sorting People alphabetically by last name
+
+        const alpha = people.sort(function(last, next) {
+            const [alastone, afirstone] = last.split(', ')
+            const [blastone, bfirstone] = next.split(', ')
+            // console.log(lastone, firstone);
+            return alastone > blastone ? 1 : -1;
+        })
+        console.log(alpha)
     </script>
 </body>
 </html>
