@@ -123,6 +123,28 @@
             return alastone > blastone ? 1 : -1;
         })
         console.log(alpha)
+
+        // Reduce Array Function
+        // Sum the Instances of each of these
+
+        const data = ['pizza', 'chicken', 'fish', 'pizza', 'indomie', 'fish', 'fish', 'fish', 'pie', 'indomie'];
+
+        const food = data.reduce(function(obj, item) {
+            // console.log(obj[item])
+            // !obj[item] ? obj[item] = 0 : obj[item]++;
+            if (!obj[item]) {
+                obj[item] = 0;
+            } 
+            obj[item]++;
+            return obj;
+        }, {
+            // pizza: 0,
+            // chicken:0,
+            // fish:0,
+            // indomie:0,
+            // pie:0
+        });
+        console.log(food)
     </script>
 </body>
 </html>
